@@ -1,0 +1,34 @@
+<div class="container-form-login">
+
+  <form class="loginform" #editForm="ngForm" (ngSubmit)="editHandle(editForm)">
+  <div className="brand">
+      <h1 class="login-title">Forget Password</h1>
+  </div>
+  <input
+  type="email"
+  class="user-input"
+  placeholder="Email"
+  name="email"
+  #email="ngModel"
+     [(ngModel)]="edit.email"
+      required email
+  />
+  <input
+  type="password"
+  placeholder="OldPassword"
+  class="user-input"
+  name="Oldpassword"
+  #oldPassword="ngModel" required [(ngModel)]="edit.oldPass"
+  />
+  <input
+  type="password"
+  placeholder="NewPassword"
+  class="user-input"
+  name="NewPassword"
+  #oldPassword="ngModel" required [(ngModel)]="edit.newPass"
+  />
+<button type="submit" class="login">Update</button>
+      <span class="msg-login d-flex flex-nowrap"><a routerLink="/register" class="flex-1 w-50">don't have an account</a>  <a class="w-50 flex-1"routerLink="/Login">aleardy have an account</a>
+      </span>
+      </form>
+  </div>
